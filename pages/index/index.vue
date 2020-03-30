@@ -20,6 +20,15 @@
 					</view>
 					<view class=" d-flex flex-row a-center w-100 py-2  j-end">
 						<view
+							v-if="item.shenheStateName === '退回重填'"
+							class="mr-2 tuct ml-auto"
+							hover-class="tuct-color"
+							style="border-radius: 50rpx; padding: 5rpx 30rpx;"
+							@tap="LookInfo(item.shenHeYiJian)"
+						>
+							审核意见
+						</view>
+						<view
 							v-show="setShow(item.shenheStateName)"
 							class="mr-2 border mine-border-color mine-text-color ml-auto"
 							hover-class="mine-bg-hover-color"
@@ -78,7 +87,7 @@ export default {
 	},
 	data() {
 		return {
-			userId:"",
+			userId: '',
 			index: 0,
 			type: 'image',
 			VehicleList: [],
@@ -108,7 +117,7 @@ export default {
 		uni.getStorage({
 			key: 'userId',
 			success: function(res) {
-				self.userId=res.data
+				self.userId = res.data;
 				self.getVehicleList(res.data);
 			},
 			fail: function() {
@@ -145,7 +154,7 @@ export default {
 				case '待审核':
 					text = '#f89509';
 					break;
-				case '退回':
+				case '退回重填':
 					text = '#fa614a';
 					break;
 				case '制卡中':
@@ -253,6 +262,16 @@ export default {
 					} else if (res.cancel) {
 					}
 				}
+			});
+		},
+		//查看退回信息
+		LookInfo(shenHeYiJian) {
+			var self = this;
+			uni.showModal({
+				title: '审核意见',
+				content: shenHeYiJian,
+				showCancel:false,
+				confirmText:'关闭'
 			});
 		},
 		togglePopup(vehicleId) {
@@ -387,5 +406,12 @@ page {
 	right: -30px;
 	top: -30px;
 	z-index: 2;
+}
+.tuct {
+	color: #ffc107;
+	border: 1px solid #ffc107;
+}
+.tuct-color {
+	background: rgba(255, 193, 7, 0.2);
 }
 </style>

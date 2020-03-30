@@ -33,7 +33,7 @@ export default {
 			success: true,
 			url: '',
 			title: '版本更新',
-			contents: ['1.修改用户注册姓名长度'],
+			contents: ['1.添加退回重填的审核意见'],
 			text:''
 		};
 	},
