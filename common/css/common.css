@@ -1,0 +1,27 @@
+page{
+	height: 100%;
+	font-size: 28upx;
+	line-height: 1.8;
+	background: #FFFFFF;
+}
+/*默认图片100%宽度 */
+image{
+	width: 100%;
+}
+/* 主色调 */
+.mine-bg-color{
+	background: #3497f3;
+}
+.mine-text-color{
+	color: #3497f3;
+}
+.mine-border-color{
+	border-color:#3497f3;
+}
+.mine-bg-hover-color{
+	background:rgba(52,151,243,0.35);
+}
+.status_bar {
+      height: var(--status-bar-height);
+      width: 100%;
+  }
