@@ -2,8 +2,8 @@
     "name" : "邢台市非道路移动源排放监管",
     "appid" : "__UNI__4D5F984",
     "description" : "车主通过手机端进行车辆申报",
-    "versionName" : "1.0.1",
-    "versionCode" : 100,
+    "versionName" : "1.0.2",
+    "versionCode" : 101,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {

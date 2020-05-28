@@ -25,7 +25,28 @@ export default {
 			mechanicsTypeIndex: 0,
 			shiyongdidianArray: [{
 				shiYongDiDianName: '请选择',
-				shiYongDiDianId: 0
+				shiyongDidianId: 0
+			},{
+				shiYongDiDianName: '施工工地',
+				shiyongDidianId: 1
+			},{
+				shiYongDiDianName: '港口',
+				shiyongDidianId: 2
+			},{
+				shiYongDiDianName: '物流园区',
+				shiyongDidianId: 3
+			},{
+				shiYongDiDianName: '机场',
+				shiyongDidianId: 4
+			},{
+				shiYongDiDianName: '铁路货运',
+				shiyongDidianId: 5
+			},{
+				shiYongDiDianName: '大型矿工企业',
+				shiyongDidianId: 6
+			},{
+				shiYongDiDianName: '其他',
+				shiyongDidianId: 7
 			}],
 			shiyongdidianIndex: 0,
 			shiyongNengyuanArray: [{
@@ -96,7 +117,7 @@ export default {
 					List: '',
 					id: '',
 					imgurl: '',
-					title: '营业执照',
+					title: '营业执照（身份证）',
 					example: '/static/example/license.jpg'
 				}]
 			},
@@ -173,6 +194,54 @@ export default {
 						imgurl: '',
 						title: '机械后端',
 						example: '/static/example/jxhm.jpg'
+					},
+					{
+						type: 'jcbg1',
+						List: '',
+						id: '',
+						imgurl: '',
+						title: '监测报告',
+						example: '/static/images/nopic.png'
+					},
+					{
+						type: 'jcbg2',
+						List: '',
+						id: '',
+						imgurl: '',
+						title: '监测报告',
+						example: '/static/images/nopic.png'
+					},
+					{
+						type: 'jcbg3',
+						List: '',
+						id: '',
+						imgurl: '',
+						title: '监测报告',
+						example: '/static/images/nopic.png'
+					},
+					{
+						type: 'jcbg4',
+						List: '',
+						id: '',
+						imgurl: '',
+						title: '监测报告',
+						example: '/static/images/nopic.png'
+					},
+					{
+						type: 'dpf1',
+						List: '',
+						id: '',
+						imgurl: '',
+						title: 'DPF',
+						example: '/static/images/nopic.png'
+					},
+					{
+						type: 'dpf2',
+						List: '',
+						id: '',
+						imgurl: '',
+						title: 'DPF',
+						example: '/static/images/nopic.png'
 					}
 				]
 			}
@@ -211,28 +280,28 @@ export default {
 				});
 		},
 		//使用地点列表
-		getPFBX: ({
-			state,
-			commit
-		}) => {
-			$http
-				.post('/controller/ShiYongDiDian/selectShiYongDiDianList.do')
-				.then(data => {
-					state.deploy.shiyongdidianArray = [];
-					state.deploy.shiyongdidianArray.push({
-						shiYongDiDianName: '请选择',
-						shiYongDiDianId: 0
-					})
-					state.deploy.shiyongdidianArray = state.deploy.shiyongdidianArray.concat(data.data);
-				})
-				.catch(msg => {
-					uni.showToast({
-						icon: 'none',
-						title: msg
-					});
-				});
-		},
-		//使用能源列表
+		// getPFBX: ({
+		// 	state,
+		// 	commit
+		// }) => {
+		// 	$http
+		// 		.post('/controller/ShiYongDiDian/selectShiYongDiDianList.do')
+		// 		.then(data => {
+		// 			state.deploy.shiyongdidianArray = [];
+		// 			state.deploy.shiyongdidianArray.push({
+		// 				shiYongDiDianName: '请选择',
+		// 				shiyongDidianId: 0
+		// 			})
+		// 			state.deploy.shiyongdidianArray = state.deploy.shiyongdidianArray.concat(data.data);
+		// 		})
+		// 		.catch(msg => {
+		// 			uni.showToast({
+		// 				icon: 'none',
+		// 				title: msg
+		// 			});
+		// 		});
+		// },
+		 //使用能源列表
 		getSYNY: ({
 			state,
 			commit

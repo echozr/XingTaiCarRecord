@@ -33,7 +33,7 @@ export default {
 			success: true,
 			url: '',
 			title: '版本更新',
-			contents: ['1.添加退回重填的审核意见'],
+			contents: ['1.添加上传监测报告及DPF','2.修改使用地点'],
 			text:''
 		};
 	},

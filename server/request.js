@@ -1,4 +1,4 @@
-export default {
+   export default {
 	//全局配置
 	common: {
 		baseUrl: "http://60.6.237.50:9010/XingTaiCarRecord",

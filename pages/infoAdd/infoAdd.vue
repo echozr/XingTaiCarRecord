@@ -60,7 +60,7 @@ export default {
 	},
 	onShow() {
 		this.getJXLX();
-		this.getPFBX();
+		// this.getPFBX();
 		this.getSYNY();
 		this.getGLFJ();
 		this.deploy.mechanicsTypeIndex = 0;
@@ -102,6 +102,7 @@ export default {
 				mask: true
 			});
 			this.$refs['baseInfo'].baseInfo.chezhuName = this.name;
+			console.log(this.$refs['baseInfo'].baseInfo)
 			this.$http
 				.post('/VehicleInfo/insertVehicleInfo.do', this.$refs['baseInfo'].baseInfo)
 				.then(data => {
@@ -222,7 +223,7 @@ export default {
 					break;
 				case 'shiyongdidianType': //使用地点
 					this.deploy.shiyongdidianIndex = e.target.value;
-					this.$refs['baseInfo'].baseInfo.shiyongDidianId = this.deploy.shiyongdidianArray[e.target.value].shiYongDiDianId;
+					this.$refs['baseInfo'].baseInfo.shiyongDidianId = this.deploy.shiyongdidianArray[e.target.value].shiyongDidianId;
 					break;
 				case 'shiyongNengyuanType': //使用能源
 					this.deploy.shiyongNengyuanIndex = e.target.value;
@@ -237,6 +238,7 @@ export default {
 					break;
 			}
 		},
+		
 		//切换switch
 		switchChange(item) {
 			const value = item.data.detail.value;

@@ -195,7 +195,7 @@
 					<picker
 						@change="bindPickerChange($event, 'shiyongdidianType')"
 						range-key="shiYongDiDianName"
-						:dataId="!editStatu ? deploy.shiyongdidianArray[deploy.shiyongdidianIndex].shiYongDiDianId : ''"
+						:dataId="!editStatu ? deploy.shiyongdidianArray[deploy.shiyongdidianIndex].shiyongDidianId : ''"
 						:value="deploy.shiyongdidianIndex"
 						:range="deploy.shiyongdidianArray"
 						:disabled="editStatu"

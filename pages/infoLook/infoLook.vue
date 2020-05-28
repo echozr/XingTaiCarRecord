@@ -118,7 +118,7 @@ export default {
 							List: '',
 							id: '',
 							imgurl: '',
-							title: '发动机型式核资号',
+							title: '发动机型式核准号',
 							example: '/static/example/fdjxshzh.jpg'
 						},
 						{
@@ -168,6 +168,54 @@ export default {
 							imgurl: '',
 							title: '机械后端',
 							example: '/static/example/jxhm.jpg'
+						},
+						{
+							type: 'jcbg1',
+							List: '',
+							id: '',
+							imgurl: '',
+							title: '监测报告',
+							example: '/static/images/nopic.png'
+						},
+						{
+							type: 'jcbg2',
+							List: '',
+							id: '',
+							imgurl: '',
+							title: '监测报告',
+							example: '/static/images/nopic.png'
+						},
+						{
+							type: 'jcbg3',
+							List: '',
+							id: '',
+							imgurl: '',
+							title: '监测报告',
+							example: '/static/images/nopic.png'
+						},
+						{
+							type: 'jcbg4',
+							List: '',
+							id: '',
+							imgurl: '',
+							title: '监测报告',
+							example: '/static/images/nopic.png'
+						},
+						{
+							type: 'dpf1',
+							List: '',
+							id: '',
+							imgurl: '',
+							title: 'DPF',
+							example: '/static/images/nopic.png'
+						},
+						{
+							type: 'dpf2',
+							List: '',
+							id: '',
+							imgurl: '',
+							title: 'DPF',
+							example: '/static/images/nopic.png'
 						}
 					]
 				}
@@ -326,8 +374,9 @@ export default {
 					this.$refs['baseInfo'].baseInfo.fadongjiChuchangDate = e.target.value;
 					break;
 				case 'shiyongdidianType': //使用地点
+			        debugger
 					this.deployLook.shiyongdidianIndex = e.target.value;
-					this.$refs['baseInfo'].baseInfo.shiyongdidianId = this.deployLook.shiyongdidianArray[e.target.value].shiYongDiDianId;
+					this.$refs['baseInfo'].baseInfo.shiyongdidianId = this.deployLook.shiyongdidianArray[e.target.value].shiyongdidianId;
 					break;
 				case 'shiyongNengyuanType': //使用能源
 					this.deployLook.shiyongNengyuanIndex = e.target.value;
