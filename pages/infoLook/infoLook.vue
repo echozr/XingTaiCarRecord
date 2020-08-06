@@ -174,7 +174,7 @@ export default {
 							List: '',
 							id: '',
 							imgurl: '',
-							title: '监测报告',
+							title: '检测报告（首页）',
 							example: '/static/images/nopic.png'
 						},
 						{
@@ -182,7 +182,7 @@ export default {
 							List: '',
 							id: '',
 							imgurl: '',
-							title: '监测报告',
+							title: '检测报告（机械信息页）',
 							example: '/static/images/nopic.png'
 						},
 						{
@@ -190,7 +190,7 @@ export default {
 							List: '',
 							id: '',
 							imgurl: '',
-							title: '监测报告',
+							title: '检测报告（检测结果页）',
 							example: '/static/images/nopic.png'
 						},
 						{
@@ -198,7 +198,7 @@ export default {
 							List: '',
 							id: '',
 							imgurl: '',
-							title: '监测报告',
+							title: '检测报告（现场照片页）',
 							example: '/static/images/nopic.png'
 						},
 						{
@@ -206,7 +206,7 @@ export default {
 							List: '',
 							id: '',
 							imgurl: '',
-							title: 'DPF',
+							title: 'DPF外观照片',
 							example: '/static/images/nopic.png'
 						},
 						{
@@ -214,7 +214,7 @@ export default {
 							List: '',
 							id: '',
 							imgurl: '',
-							title: 'DPF',
+							title: 'DPF铭牌照片',
 							example: '/static/images/nopic.png'
 						}
 					]

@@ -32,6 +32,14 @@
 					/>
 					<image class="img" :src="showPassword ? '/static/images/op.png' : '/static/images/cl.png'" @tap="showPassword = !showPassword"></image>
 				</view>
+				<view class="lost-call">
+					<checkbox-group @tap="changeInfo">
+						<label>
+							<checkbox :value="checkV"  :checked="isChecked" />
+							记住密码
+						</label>
+					</checkbox-group>
+				</view>
 			</view>
 
 			<view class="dlbutton" hover-class="dlbutton-hover" @tap="submit()"><text>登录</text></view>
@@ -55,6 +63,8 @@ export default {
 				userId: false
 			},
 			showPassword: false,
+			isChecked: false,
+			checkV: 'false',
 			user: {
 				userId: '',
 				password: ''
@@ -63,7 +73,7 @@ export default {
 			rules: {
 				userId: [
 					{
-						rule:  /\S/,
+						rule: /\S/,
 						msg: '用户名不能为空'
 					}
 				],
@@ -78,6 +88,9 @@ export default {
 	},
 	components: {
 		uniStatusBar
+	},
+	mounted() {
+		this.getInfo()
 	},
 	methods: {
 		//注册
@@ -113,9 +126,11 @@ export default {
 		},
 		// 提交表单
 		submit() {
+			if (this.isChecked != '') {
+				this.setInof();
+			}
 			uni.hideLoading();
-			
-			 	uni.hideKeyboard();
+			uni.hideKeyboard();
 			if (!this.validate('userId')) return; // 验证用户名
 			if (!this.validate('password')) return; // 验证密码
 			uni.showLoading({
@@ -147,7 +162,55 @@ export default {
 						icon: 'none',
 						title: msg
 					});
-				}); 
+				});
+		},
+		// 存储用户信息
+		setInof() {
+			if (this.user.userId != '' && this.user.password != '') {
+				const loginInof = { user: this.user.userId, paw: this.user.password, isChecked: this.isChecked };
+				uni.setStorage('LI');
+				uni.setStorage({
+					key: 'LI',
+					data: JSON.stringify(loginInof),
+					success: function() {
+					}
+				});
+			} else {
+				uni.showToast({
+					icon: 'none',
+					title: '账号密码不能为空'
+				});
+			}
+		},
+		// 读取用户信息
+		getInfo() {
+			let _this=this
+			uni.getStorage({
+				key: 'LI',
+				success: function(res) {
+					console.log(res)
+		      const loginInfo=JSON.parse(res.data)
+					_this.user.userId = loginInfo.user
+					_this.user.password=loginInfo.paw
+					_this.isChecked=loginInfo.isChecked
+				}
+			});
+		},
+		// 清除缓存
+		clearInfo() {
+			uni.clearStorage();
+		},
+		// 改变信息
+		changeInfo(e) {
+			const isChecked = e.detail.value;
+			if (isChecked == false) {
+				this.clearInfo();
+			} else {
+				this.setInof();
+				this.getInfo();
+				this.isChecked=true
+				this.checkV=isChecked
+			}
 		}
 	}
 };
