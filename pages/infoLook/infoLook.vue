@@ -175,7 +175,7 @@ export default {
 							id: '',
 							imgurl: '',
 							title: '检测报告（首页）',
-							example: '/static/images/nopic.png'
+							example: '/static/images/jcbg1.png'
 						},
 						{
 							type: 'jcbg2',
@@ -183,7 +183,7 @@ export default {
 							id: '',
 							imgurl: '',
 							title: '检测报告（机械信息页）',
-							example: '/static/images/nopic.png'
+							example: '/static/images/jcbg2.png'
 						},
 						{
 							type: 'jcbg3',
@@ -191,7 +191,7 @@ export default {
 							id: '',
 							imgurl: '',
 							title: '检测报告（检测结果页）',
-							example: '/static/images/nopic.png'
+							example: '/static/images/jcbg3.png'
 						},
 						{
 							type: 'jcbg4',
@@ -199,7 +199,7 @@ export default {
 							id: '',
 							imgurl: '',
 							title: '检测报告（现场照片页）',
-							example: '/static/images/nopic.png'
+							example: '/static/images/jcbg4.png'
 						},
 						{
 							type: 'dpf1',
@@ -207,7 +207,7 @@ export default {
 							id: '',
 							imgurl: '',
 							title: 'DPF外观照片',
-							example: '/static/images/nopic.png'
+							example: '/static/images/dpf1.png'
 						},
 						{
 							type: 'dpf2',
@@ -215,7 +215,7 @@ export default {
 							id: '',
 							imgurl: '',
 							title: 'DPF铭牌照片',
-							example: '/static/images/nopic.png'
+							example: '/static/images/dpf2.png'
 						}
 					]
 				}
@@ -228,15 +228,279 @@ export default {
 			imageUploadlook: `${this.$http.common.baseUrl}/admin/attach/downloadAttach.do?attachId=`,
 			imageUploadUrl: `${this.$http.common.baseUrl}/VehicleInfo/uploadAttachment.do`,
 			vehicleId: '',
-			editText:""
+			editText:"",
+			deploy: {
+				mechanicsTypeArray: [{
+						mechanicsTypeName: '请选择',
+						mechanicsTypeID: 0
+					}, {
+						mechanicsTypeName: "货车",
+						mechanicsTypeID: 18
+					},
+					{
+						mechanicsTypeName: "客车",
+						mechanicsTypeID: 19
+					},
+					{
+						mechanicsTypeName: "中型专项作业车",
+						mechanicsTypeID: 20
+					},
+					{
+						mechanicsTypeName: "起重机",
+						mechanicsTypeID: 1
+					},
+					{
+						mechanicsTypeName: "旋挖钻机",
+						mechanicsTypeID: 2
+					},
+					{
+						mechanicsTypeName: "强夯机",
+						mechanicsTypeID: 3
+					},
+					{
+						mechanicsTypeName: "打桩机",
+						mechanicsTypeID: 4
+					},
+					{
+						mechanicsTypeName: "挖掘机",
+						mechanicsTypeID: 5
+					},
+					{
+						mechanicsTypeName: "推土机",
+						mechanicsTypeID: 6
+					},
+					{
+						mechanicsTypeName: "装载机",
+						mechanicsTypeID: 7
+					},
+					{
+						mechanicsTypeName: "叉车",
+						mechanicsTypeID: 8
+					},
+					{
+						mechanicsTypeName: "压路机",
+						mechanicsTypeID: 9
+					},
+					{
+						mechanicsTypeName: "摊铺机",
+						mechanicsTypeID: 10
+					},
+					{
+						mechanicsTypeName: "平地机",
+						mechanicsTypeID: 11
+					},
+					{
+						mechanicsTypeName: "联合收割机",
+						mechanicsTypeID: 12
+					},
+					{
+						mechanicsTypeName: "农用运输机",
+						mechanicsTypeID: 13
+					},
+					{
+						mechanicsTypeName: "排灌机械",
+						mechanicsTypeID: 14
+					},
+					{
+						mechanicsTypeName: "手持小型通用机械",
+						mechanicsTypeID: 15
+					},
+					{
+						mechanicsTypeName: "非手持小型通用机械",
+						mechanicsTypeID: 16
+					},
+					{
+						mechanicsTypeName: "其他机械",
+						mechanicsTypeID: 17
+					}
+				],
+				mechanicsTypeIndex: 0,
+				shiyongdidianArray: [{
+					shiYongDiDianName: '请选择',
+					shiyongDidianId: 0
+				}, {
+					shiYongDiDianName: '施工工地',
+					shiyongDidianId: 1
+				}, {
+					shiYongDiDianName: '港口',
+					shiyongDidianId: 2
+				}, {
+					shiYongDiDianName: '物流园区',
+					shiyongDidianId: 3
+				}, {
+					shiYongDiDianName: '机场',
+					shiyongDidianId: 4
+				}, {
+					shiYongDiDianName: '铁路货运',
+					shiyongDidianId: 5
+				}, {
+					shiYongDiDianName: '大型矿工企业',
+					shiyongDidianId: 6
+				}, {
+					shiYongDiDianName: '其他',
+					shiyongDidianId: 7
+				}],
+				shiyongdidianIndex: 0,
+				shiyongNengyuanArray: [{
+						shiYongNengYuanName: '请选择',
+						shiYongNengYuanID: 0
+					}, {
+						shiYongNengYuanID: 1,
+						shiYongNengYuanName: "汽油"
+					},
+					{
+						shiYongNengYuanID: 2,
+						shiYongNengYuanName: "柴油"
+					},
+					{
+						shiYongNengYuanID: 3,
+						shiYongNengYuanName: "电动"
+					},
+					{
+						shiYongNengYuanID: 4,
+						shiYongNengYuanName: "CNG"
+					},
+					{
+						shiYongNengYuanID: 5,
+						shiYongNengYuanName: "天然气"
+					}
+				],
+				shiyongNengyuanIndex: 0,
+				aearFenjuArray: [{
+						fenJuName: '请选择',
+						fenJuID: 0
+					}, {
+						fenJuID: 1,
+						fenJuCode: "A",
+						fenJuName: "桥东区分局"
+					},
+			
+					{
+						fenJuID: 2,
+						fenJuCode: "B",
+						fenJuName: "桥西区分局"
+					},
+			
+					{
+						fenJuID: 3,
+						fenJuCode: "C",
+						fenJuName: "邢台县分局"
+					},
+			
+					{
+						fenJuID: 4,
+						fenJuCode: "H",
+						fenJuName: "临城县分局"
+					},
+			
+					{
+						fenJuID: 5,
+						fenJuCode: "G",
+						fenJuName: "内丘县分局"
+					},
+			
+					{
+						fenJuID: 6,
+						fenJuCode: "J",
+						fenJuName: "柏乡县分局"
+					},
+			
+					{
+						fenJuID: 7,
+						fenJuCode: "K",
+						fenJuName: "隆尧县分局"
+					},
+			
+					{
+						fenJuID: 8,
+						fenJuCode: "F",
+						fenJuName: "任县分局"
+					},
+			
+					{
+						fenJuID: 9,
+						fenJuCode: "E",
+						fenJuName: "南和县分局"
+					},
+			
+					{
+						fenJuID: 10,
+						fenJuCode: "V",
+						fenJuName: "宁晋县分局"
+					},
+			
+					{
+						fenJuID: 11,
+						fenJuCode: "L",
+						fenJuName: "巨鹿县分局"
+					},
+			
+					{
+						fenJuID: 12,
+						fenJuCode: "U",
+						fenJuName: "新河县分局"
+					},
+			
+					{
+						fenJuID: 13,
+						fenJuCode: "N",
+						fenJuName: "广宗县分局"
+					},
+			
+					{
+						fenJuID: 14,
+						fenJuCode: "M",
+						fenJuName: "平乡县分局"
+					},
+			
+					{
+						fenJuID: 15,
+						fenJuCode: "P",
+						fenJuName: "威县分局"
+					},
+			
+					{
+						fenJuID: 16,
+						fenJuCode: "R",
+						fenJuName: "清河县分局"
+					},
+			
+					{
+						fenJuID: 17,
+						fenJuCode: "Q",
+						fenJuName: "临西县分局"
+					},
+			
+					{
+						fenJuID: 18,
+						fenJuCode: "S",
+						fenJuName: "南宫市分局"
+					},
+			
+					{
+						fenJuID: 19,
+						fenJuCode: "D",
+						fenJuName: "沙河市分局"
+					},
+			
+					{
+						fenJuID: 20,
+						fenJuCode: "W",
+						fenJuName: "河北邢台经济开发区分局"
+					}
+				],
+				aearFenjuIndex: 0,
+				yunxingSwitch: false,
+				isinstallObdSwitch: false,
+				isinstallWuranSwitch: false,
+				startDate: getDate('start'),
+				endDate: getDate('end')
+			},
+			
 		};
 	},
 	onShow() {
 		const self = this;
-		self.getJXLX();
-		self.getPFBX();
-		self.getSYNY();
-		self.getGLFJ();
 		uni.getStorage({
 			key: 'vehicleId',
 			success: function(res) {

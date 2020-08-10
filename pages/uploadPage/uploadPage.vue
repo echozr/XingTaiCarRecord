@@ -33,7 +33,7 @@ export default {
 			success: true,
 			url: '',
 			title: '版本更新',
-			contents: ['1.新增记住密码功能'],
+			contents: ['更新遗留问题'],
 			text:''
 		};
 	},
