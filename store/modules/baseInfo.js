@@ -157,125 +157,106 @@ export default {
 			aearFenjuArray: [{
 					fenJuName: '请选择',
 					fenJuID: 0
-				}, {
-					fenJuID: 1,
-					fenJuCode: "A",
-					fenJuName: "桥东区分局"
-				},
-
-				{
-					fenJuID: 2,
-					fenJuCode: "B",
-					fenJuName: "桥西区分局"
-				},
-
-				{
-					fenJuID: 3,
-					fenJuCode: "C",
-					fenJuName: "邢台县分局"
-				},
-
-				{
-					fenJuID: 4,
-					fenJuCode: "H",
-					fenJuName: "临城县分局"
-				},
-
-				{
-					fenJuID: 5,
-					fenJuCode: "G",
-					fenJuName: "内丘县分局"
-				},
-
-				{
-					fenJuID: 6,
-					fenJuCode: "J",
-					fenJuName: "柏乡县分局"
-				},
-
-				{
-					fenJuID: 7,
-					fenJuCode: "K",
-					fenJuName: "隆尧县分局"
-				},
-
-				{
-					fenJuID: 8,
-					fenJuCode: "F",
-					fenJuName: "任县分局"
-				},
-
-				{
-					fenJuID: 9,
-					fenJuCode: "E",
-					fenJuName: "南和县分局"
-				},
-
-				{
-					fenJuID: 10,
-					fenJuCode: "V",
-					fenJuName: "宁晋县分局"
-				},
-
-				{
-					fenJuID: 11,
-					fenJuCode: "L",
-					fenJuName: "巨鹿县分局"
-				},
-
-				{
-					fenJuID: 12,
-					fenJuCode: "U",
-					fenJuName: "新河县分局"
-				},
-
-				{
-					fenJuID: 13,
-					fenJuCode: "N",
-					fenJuName: "广宗县分局"
-				},
-
-				{
-					fenJuID: 14,
-					fenJuCode: "M",
-					fenJuName: "平乡县分局"
-				},
-
-				{
-					fenJuID: 15,
-					fenJuCode: "P",
-					fenJuName: "威县分局"
-				},
-
-				{
-					fenJuID: 16,
-					fenJuCode: "R",
-					fenJuName: "清河县分局"
-				},
-
-				{
-					fenJuID: 17,
-					fenJuCode: "Q",
-					fenJuName: "临西县分局"
-				},
-
-				{
-					fenJuID: 18,
-					fenJuCode: "S",
-					fenJuName: "南宫市分局"
-				},
-
-				{
-					fenJuID: 19,
-					fenJuCode: "D",
-					fenJuName: "沙河市分局"
-				},
-
-				{
-					fenJuID: 20,
-					fenJuCode: "W",
-					fenJuName: "河北邢台经济开发区分局"
-				}
+				},{
+			"fenJuCode": "A",
+			"fenJuID": 1,
+			"fenJuName": "襄都区分局"
+		},
+		{
+			"fenJuCode": "B",
+			"fenJuID": 2,
+			"fenJuName": "信都区分局"
+		},
+		{
+			"fenJuCode": "X",
+			"fenJuID": 3,
+			"fenJuName": "邢东新区分局"
+		},
+		{
+			"fenJuCode": "H",
+			"fenJuID": 4,
+			"fenJuName": "临城县分局"
+		},
+		{
+			"fenJuCode": "G",
+			"fenJuID": 5,
+			"fenJuName": "内丘县分局"
+		},
+		{
+			"fenJuCode": "J",
+			"fenJuID": 6,
+			"fenJuName": "柏乡县分局"
+		},
+		{
+			"fenJuCode": "K",
+			"fenJuID": 7,
+			"fenJuName": "隆尧县分局"
+		},
+		{
+			"fenJuCode": "F",
+			"fenJuID": 8,
+			"fenJuName": "任泽区分局"
+		},
+		{
+			"fenJuCode": "E",
+			"fenJuID": 9,
+			"fenJuName": "南和区分局"
+		},
+		{
+			"fenJuCode": "V",
+			"fenJuID": 10,
+			"fenJuName": "宁晋县分局"
+		},
+		{
+			"fenJuCode": "L",
+			"fenJuID": 11,
+			"fenJuName": "巨鹿县分局"
+		},
+		{
+			"fenJuCode": "U",
+			"fenJuID": 12,
+			"fenJuName": "新河县分局"
+		},
+		{
+			"fenJuCode": "N",
+			"fenJuID": 13,
+			"fenJuName": "广宗县分局"
+		},
+		{
+			"fenJuCode": "M",
+			"fenJuID": 14,
+			"fenJuName": "平乡县分局"
+		},
+		{
+			"fenJuCode": "P",
+			"fenJuID": 15,
+			"fenJuName": "威县分局"
+		},
+		{
+			"fenJuCode": "R",
+			"fenJuID": 16,
+			"fenJuName": "清河县分局"
+		},
+		{
+			"fenJuCode": "Q",
+			"fenJuID": 17,
+			"fenJuName": "临西县分局"
+		},
+		{
+			"fenJuCode": "S",
+			"fenJuID": 18,
+			"fenJuName": "南宫市分局"
+		},
+		{
+			"fenJuCode": "D",
+			"fenJuID": 19,
+			"fenJuName": "沙河市分局"
+		},
+		{
+			"fenJuCode": "W",
+			"fenJuID": 20,
+			"fenJuName": "河北邢台经济开发区分局"
+		}
 			],
 			aearFenjuIndex: 0,
 			yunxingSwitch: false,

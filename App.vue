@@ -1,7 +1,7 @@
 <script>
 	export default {
 		onLaunch: function() {
-			const version = 109;
+			const version = 112;
 			uni.getSystemInfo({
 				success: res => {
 					//检测当前平台，如果是安卓则启动安卓更新
@@ -14,7 +14,7 @@
 		onShow: function() {
 			console.log('App Show')
 		},
-		onHide: function() {sssss
+		onHide: function() {
 			console.log('App Hide')
 		},
 		methods: {
