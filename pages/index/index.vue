@@ -38,6 +38,14 @@
 							信息采集卡
 						</view>
 						<view
+							class="mr-2 border mine-border-color mine-text-color ml-auto"
+							hover-class="mine-bg-hover-color"
+							style="border-radius: 50rpx; padding: 5rpx 30rpx;"
+							@tap="openRecording(item.vehicleInfoId)"
+						>
+							机械进出场
+						</view>
+						<view
 							v-show="!setShow(item.shenheStateName)"
 							class=" mr-2 border  mine-text-color "
 							hover-class="mine-bg-hover-color"
@@ -314,6 +322,12 @@ export default {
 		},
 		cancel(type) {
 			this.$refs['image'].close();
+		},
+		// 点击机械进出场
+		openRecording(id){
+			uni.navigateTo({
+			    url: '../recording/recording?vid='+id
+			});
 		}
 	}
 };

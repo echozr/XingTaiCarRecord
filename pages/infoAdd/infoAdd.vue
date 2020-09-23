@@ -495,7 +495,6 @@
 						break;
 				}
 			},
-
 			//切换switch
 			switchChange(item) {
 				const value = item.data.detail.value;

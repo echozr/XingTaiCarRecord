@@ -46,6 +46,16 @@ function getDate(type) {
 	return `${year}-${month}-${day}`;
 }
 
+function getNowTiem(){
+	var  date = new Date();
+	let year = date.getFullYear();
+	let month = date.getMonth() + 1;
+	let day = date.getDate();
+	let Hours= date.getHours();
+	let Minutes=date.getMinutes()
+	return `${year}年${month}月${day}日  ${Hours}:${Minutes}`
+}
+
 var dateUtils = {
 	UNITS: {
 		'年': 31557600000,
@@ -87,5 +97,6 @@ module.exports = {
 	formatTime: formatTime,
 	formatLocation: formatLocation,
 	dateUtils: dateUtils,
-	getDate: getDate
+	getDate: getDate,
+	getNow:getNowTiem
 }
