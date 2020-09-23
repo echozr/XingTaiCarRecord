@@ -8,6 +8,18 @@
 			<view class="list">
 				<view class="list-call">
 					<text class="iconfont icon-shouji mine-text-color "></text>
+					 <view class="uni-list-cell-db biaoti">
+						<picker 
+							@change="bindPickerChange" 
+							:value="appTypeIndex" 
+							:range="appTypeArray"
+						>
+							<view class="uni-input">{{ appTypeArray[appTypeIndex] }}</view>
+						</picker>
+					</view>
+				</view>
+				<view class="list-call">
+					<text class="iconfont icon-shouji mine-text-color "></text>
 					<input class="biaoti" v-model="register.userId"  placeholder="请输入账号" @blur="phoneblur(register.userId)" />
 				</view>
 				<view class="list-call">
@@ -50,17 +62,26 @@ export default {
 	data() {
 		return {
 			register: {
+				appType: '',
 				userId: '',
 				password: '',
 				repassword:'',
-				chezhuname: '',
+				chezhuname: ''
 			},
 			showPassword: false,
 			second: 0,
 			license: '',
 			isRepeat: true,
+			appTypeIndex: 0,
+			appTypeArray: ['请选择账号类别', '车主版', '工地版'],
 			// 验证规则
 			rules: {
+				appType: [
+					{
+						rule: /^[0|1]/,
+						msg: '账号类别不能为空'
+					}
+				],
 				userId: [
 					{
 						rule:/\S/,
@@ -99,6 +120,11 @@ export default {
 		uniStatusBar
 	},
 	methods: {
+		// 账号类型切换
+		bindPickerChange: function(e) {
+			this.appTypeIndex = e.target.value
+			this.register.appType = this.appTypeIndex - 1
+		},
 		//验证用户
 		phoneblur(userId) {
 			//检查用户是否存在
@@ -134,9 +160,10 @@ export default {
 				uni.showToast({ title: '该用户名已经注册！', icon: 'none' });
 				return;
 			}
-			if (!this.validate('userId')) return; // 验证用户名
-			if (!this.validate('password')) return; // 验证密码
-			if (!this.validate('chezhuname')) return; // 验证用户名
+			if (!this.validate('appType')) return;     // 验证账号类型
+			if (!this.validate('userId')) return;      // 验证用户名
+			if (!this.validate('password')) return;    // 验证密码
+			if (!this.validate('chezhuname')) return;  // 验证用户名
 			if(this.register.password!=this.register.repassword){
 				uni.showToast({ title: '两次密码不一致！', icon: 'none' });
 				return;
@@ -220,6 +247,10 @@ export default {
 	font-size: 30rpx;
 	margin-left: 16rpx;
 	color: #666666;
+}
+.list-call .uni-list-cell-db.biaoti .uni-input{
+	color: grey;
+	padding-left: 0;
 }
 .list-call .img {
 	width: 40rpx;
