@@ -103,8 +103,25 @@
 					}
 				}
 			}
-		}
+		},
+		{
+			"path": "pages/recording/recording",
+			"style": {
+				"navigationBarBackgroundColor": "#3497f3",
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"bounce": "none",
+					"scrollIndicator": "none",
+					"titleNView": {
+						"titleSize": "18px",
+						"titleText": "邢台市非道路移动源排放监管",
+						"titleOverflow": "clip"
+						
+					}
+				}
+			}
 
+		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

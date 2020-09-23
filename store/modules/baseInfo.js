@@ -522,7 +522,7 @@ export default {
 						});
 					});
 			},
-		// 	//管理分局
+		//管理分局
 			getGLFJ: ({
 				state,
 				commit
